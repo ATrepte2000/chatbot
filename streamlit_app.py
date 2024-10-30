@@ -1,32 +1,60 @@
 import streamlit as st
-from PIL import Image
 from openai import OpenAI
 
 
+# Titel und Begrüßung mit Smileys
+st.title("Rflect - Dein Reflektionsbegleiter 📝")
+st.write("👋 **Hallo!** Ich bin der Rflect-Chatbot und unterstütze dich beim Reflektieren.")
 
-
-# Show title and description.
-st.title("Rflect - Chatbot")
-st.write("👋 Hallo! Ich bin der Rflect-Chatbot. Ich bin hier, um dich beim Reflektieren zu unterstützen.")
-
-#Colors
+# Farbschema und Stil anpassen mit Pastelltönen
 st.markdown(
     """
     <style>
+    /* Gesamt-Hintergrundfarbe */
     .stApp {
-        background-color: #f3f4f6;
-        font-family: 'Arial', sans-serif;
+        background-color: #F5F5F5; /* Sanftes Grau-Pastell */
+        font-family: 'Helvetica', sans-serif;
     }
-    .stTextInput, .stButton {
-        color: #1e3a8a;
-        background-color: #e0e7ff;
-    }
+    /* Titelstil */
     h1 {
-        color: #1e40af;
+        color: #6A5ACD; /* Pastell-Lavendel */
+    }
+    /* Anpassung von Text und Links */
+    .stMarkdown {
+        color: #4B0082; /* Indigoblau */
+    }
+    a {
+        color: #FF69B4; /* Sanftes Pink */
+    }
+    /* Eingabefelder */
+    input {
+        background-color: #E6E6FA; /* Lavendel */
+        color: #4B0082;
+        border: 1px solid #D8BFD8; /* Thistle */
+    }
+    /* Buttons */
+    button {
+        background-color: #DDA0DD; /* Pflaume */
+        color: #FFFFFF;
+        border: None;
+        border-radius: 10px;
+        padding: 0.5em 1em;
+    }
+    /* Scrollbar anpassen */
+    ::-webkit-scrollbar {
+        width: 8px;
+    }
+    ::-webkit-scrollbar-thumb {
+        background: #D8BFD8;
+        border-radius: 10px;
     }
     </style>
     """, unsafe_allow_html=True
 )
+
+# Weiterer Text mit Smileys
+st.write("🌟 **Lass uns gemeinsam deine Gedanken erkunden!**")
+st.write("💡 **Tipp:** Sei ehrlich zu dir selbst, um das Beste aus der Reflexion zu ziehen.")
 
 
 # Ask user for their OpenAI API key via `st.text_input`.
