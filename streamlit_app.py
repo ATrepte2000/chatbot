@@ -1,9 +1,7 @@
 import streamlit as st
 from PIL import Image
 
-# Logo einfügen (stelle sicher, dass du 'logo.png' im richtigen Verzeichnis hast)
-logo = Image.open("logo.png")
-st.image(logo, width=150)
+
 
 # Titel und Begrüßung mit Smileys
 st.markdown("<h1 style='text-align: center; color: #6A5ACD;'>Rflect - Dein Reflektionsbegleiter 📝</h1>", unsafe_allow_html=True)
