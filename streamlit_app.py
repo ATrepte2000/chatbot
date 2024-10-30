@@ -1,44 +1,59 @@
 import streamlit as st
-from openai import OpenAI
+from PIL import Image
 
+# Logo einfügen (stelle sicher, dass du 'logo.png' im richtigen Verzeichnis hast)
+logo = Image.open("logo.png")
+st.image(logo, width=150)
 
 # Titel und Begrüßung mit Smileys
-st.title("Rflect - Dein Reflektionsbegleiter 📝")
-st.write("👋 **Hallo!** Ich bin der Rflect-Chatbot und unterstütze dich beim Reflektieren.")
+st.markdown("<h1 style='text-align: center; color: #6A5ACD;'>Rflect - Dein Reflektionsbegleiter 📝</h1>", unsafe_allow_html=True)
+st.markdown("<h3 style='text-align: center; color: #708090;'>👋 Hallo! Ich bin der Rflect-Chatbot und freue mich darauf, dich beim Reflektieren zu unterstützen!</h3>", unsafe_allow_html=True)
 
-# Farbschema und Stil anpassen mit Pastelltönen
+# Farbschema und Stil anpassen mit Pastelltönen und variierenden Schriftarten
 st.markdown(
     """
     <style>
     /* Gesamt-Hintergrundfarbe */
     .stApp {
-        background-color: #F5F5F5; /* Sanftes Grau-Pastell */
-        font-family: 'Helvetica', sans-serif;
+        background-color: #FFFAF0; /* Floral White */
+        font-family: 'Georgia', serif;
     }
     /* Titelstil */
     h1 {
         color: #6A5ACD; /* Pastell-Lavendel */
+        font-family: 'Brush Script MT', cursive;
+    }
+    /* Untertitelstil */
+    h3 {
+        color: #708090; /* Slate Gray */
+        font-family: 'Comic Sans MS', cursive;
     }
     /* Anpassung von Text und Links */
-    .stMarkdown {
-        color: #4B0082; /* Indigoblau */
-    }
-    a {
-        color: #FF69B4; /* Sanftes Pink */
+    .stMarkdown, .stTextInput, .stButton {
+        color: #4B0082; /* Indigo */
+        font-family: 'Arial', sans-serif;
     }
     /* Eingabefelder */
     input {
-        background-color: #E6E6FA; /* Lavendel */
+        background-color: #E6E6FA; /* Lavender */
         color: #4B0082;
         border: 1px solid #D8BFD8; /* Thistle */
+        border-radius: 10px;
+        padding: 10px;
     }
     /* Buttons */
     button {
-        background-color: #DDA0DD; /* Pflaume */
-        color: #FFFFFF;
+        background-color: #FFDAB9; /* Peach Puff */
+        color: #4B0082;
         border: None;
         border-radius: 10px;
         padding: 0.5em 1em;
+        font-size: 16px;
+    }
+    /* Hover-Effekt für Buttons */
+    button:hover {
+        background-color: #FFE4E1; /* Misty Rose */
+        cursor: pointer;
     }
     /* Scrollbar anpassen */
     ::-webkit-scrollbar {
@@ -52,9 +67,10 @@ st.markdown(
     """, unsafe_allow_html=True
 )
 
-# Weiterer Text mit Smileys
-st.write("🌟 **Lass uns gemeinsam deine Gedanken erkunden!**")
-st.write("💡 **Tipp:** Sei ehrlich zu dir selbst, um das Beste aus der Reflexion zu ziehen.")
+# Weitere freundliche Nachrichten mit Smileys
+st.write("🌟 **Lass uns gemeinsam deine Gedanken erkunden und neue Erkenntnisse gewinnen!**")
+st.write("💡 **Tipp:** Offenheit und Ehrlichkeit sind der Schlüssel zu einer tiefgehenden Reflexion. Ich bin gespannt auf deine Ideen! 😊")
+
 
 
 # Ask user for their OpenAI API key via `st.text_input`.
