@@ -1,13 +1,35 @@
 import streamlit as st
+from PIL import Image
 from openai import OpenAI
+
+# Lade das Logo
+logo = Image.open("logo.png")
+st.image(logo, width=100)  # Passe die Breite nach Wunsch an
+
 
 # Show title and description.
 st.title("Rflect - Chatbot")
-st.write(
-    "This is a simple chatbot that uses OpenAI's GPT-3.5 model to generate responses. "
-    "To use this app, you need to provide an OpenAI API key, which you can get [here](https://platform.openai.com/account/api-keys). "
-    "You can also learn how to build this app step by step by [following our tutorial](https://docs.streamlit.io/develop/tutorials/llms/build-conversational-apps)."
+st.write("👋 Hallo! Ich bin der Rflect-Chatbot. Ich bin hier, um dich beim Reflektieren zu unterstützen.")
+
+#Colors
+st.markdown(
+    """
+    <style>
+    .stApp {
+        background-color: #f3f4f6;
+        font-family: 'Arial', sans-serif;
+    }
+    .stTextInput, .stButton {
+        color: #1e3a8a;
+        background-color: #e0e7ff;
+    }
+    h1 {
+        color: #1e40af;
+    }
+    </style>
+    """, unsafe_allow_html=True
 )
+
 
 # Ask user for their OpenAI API key via `st.text_input`.
 # Alternatively, you can store the API key in `./.streamlit/secrets.toml` and access it
