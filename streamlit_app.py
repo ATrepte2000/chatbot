@@ -4,7 +4,7 @@ from PIL import Image
 
 
 # Titel und Begrüßung mit Smileys
-st.markdown("<h1 style='text-align: center; color: #6A5ACD;'>Rflect - Dein Reflektionsbegleiter 📝</h1>", unsafe_allow_html=True)
+st.markdown("<h1 style='text-align: center; color: ##708090;'>Rflect - Dein Reflektionsbegleiter 📝</h1>", unsafe_allow_html=True)
 st.markdown("<h3 style='text-align: center; color: #708090;'>👋 Hallo! Ich bin der Rflect-Chatbot und freue mich darauf, dich beim Reflektieren zu unterstützen!</h3>", unsafe_allow_html=True)
 
 # Farbschema und Stil anpassen mit Pastelltönen und variierenden Schriftarten
