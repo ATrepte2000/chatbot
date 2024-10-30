@@ -3,7 +3,7 @@ from PIL import Image
 from openai import OpenAI
 
 # Lade das Logo
-logo = Image.open("logo.png")
+logo = Image.open("logo.svg")
 st.image(logo, width=100)  # Passe die Breite nach Wunsch an
 
 
