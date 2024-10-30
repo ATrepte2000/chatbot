@@ -18,7 +18,7 @@ st.markdown(
     }
     /* Titelstil */
     h1 {
-        color: #6A5ACD; /* Pastell-Lavendel */
+        color: #928782; /* Pastell-Lavendel */
         font-family: 'Brush Script MT', cursive;
     }
     /* Untertitelstil */
